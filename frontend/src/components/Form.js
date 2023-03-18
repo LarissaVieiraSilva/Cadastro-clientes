@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { toast } from "react-toastify";
-import Checkbox from "./Checkbox";
+//import Checkbox from "./Checkbox";
+
 
 
 const FormContainer = styled.form`
@@ -42,9 +43,10 @@ const Button = styled.button`
   height: 42px;
 `;
 
+
 const Form = ({ getUsers, onEdit, setOnEdit }) => {
   const ref = useRef();
-
+  
   useEffect(() => {
     if (onEdit) {
       const user = ref.current;
@@ -139,11 +141,9 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         <Input name="data_nascimento" type="date" />
       </InputArea>
 
-      <Checkbox/>
       
       <Button type="submit">SALVAR</Button>
-      
-      
+            
       
     </FormContainer>
   );
